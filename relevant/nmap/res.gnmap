@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Fri Dec 16 14:52:30 2022 as: nmap -sT -sV -sV -oA nmap/res 10.10.100.134
+Host: 10.10.100.134 ()	Status: Up
+Host: 10.10.100.134 ()	Ports: 80/open/tcp//http//Microsoft HTTPAPI httpd 2.0 (SSDP|UPnP)/, 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Microsoft Windows Server 2008 R2 - 2012 microsoft-ds/, 3389/open/tcp//ssl|ms-wbt-server?///	Ignored State: filtered (995)
+# Nmap done at Fri Dec 16 14:54:27 2022 -- 1 IP address (1 host up) scanned in 117.22 seconds

@@ -1,0 +1,35 @@
+[2K# Attribution-Share Alike 3.0 License. To view a copy of this  [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 66ms][0m
+[2Kimages                  [Status: 301, Size: 236, Words: 14, Lines: 8, Duration: 74ms][0m
+[2K# Copyright 2007 James Fisher [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 74ms][0m
+[2K#                       [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 74ms][0m
+[2K# directory-list-2.3-medium.txt [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 79ms][0m
+[2K# on atleast 2 different hosts [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 82ms][0m
+[2K#                       [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 89ms][0m
+[2K#                       [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 91ms][0m
+[2K# or send a letter to Creative Commons, 171 Second Street,  [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 94ms][0m
+[2K# Priority ordered case sensative list, where entries were found  [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 97ms][0m
+[2K#                       [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 113ms][0m
+[2K# This work is licensed under the Creative Commons  [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 117ms][0m
+[2K# license, visit http://creativecommons.org/licenses/by-sa/3.0/  [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 120ms][0m
+[2Kblog                    [Status: 301, Size: 234, Words: 14, Lines: 8, Duration: 123ms][0m
+[2Ksitemap                 [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 67ms][0m
+[2K                        [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 150ms][0m
+[2K# Suite 300, San Francisco, California, 94105, USA. [Status: 200, Size: 1188, Words: 189, Lines: 31, Duration: 149ms][0m
+[2Krss                     [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 279ms][0m
+[2Klogin                   [Status: 302, Size: 0, Words: 1, Lines: 1, Duration: 625ms][0m
+[2Kvideo                   [Status: 301, Size: 235, Words: 14, Lines: 8, Duration: 61ms][0m
+[2K0                       [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 709ms][0m
+[2Kfeed                    [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 683ms][0m
+[2Kimage                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 654ms][0m
+[2Katom                    [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 664ms][0m
+[2Kwp-content              [Status: 301, Size: 240, Words: 14, Lines: 8, Duration: 61ms][0m
+[2Kadmin                   [Status: 301, Size: 235, Words: 14, Lines: 8, Duration: 62ms][0m
+[2Kaudio                   [Status: 301, Size: 235, Words: 14, Lines: 8, Duration: 60ms][0m
+[2Kintro                   [Status: 200, Size: 516314, Words: 2076, Lines: 2028, Duration: 60ms][0m
+[2Kwp-login                [Status: 200, Size: 2613, Words: 115, Lines: 53, Duration: 745ms][0m
+[2Kcss                     [Status: 301, Size: 233, Words: 14, Lines: 8, Duration: 62ms][0m
+[2Krss2                    [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 738ms][0m
+[2Klicense                 [Status: 200, Size: 309, Words: 25, Lines: 157, Duration: 137ms][0m
+[2Kwp-includes             [Status: 301, Size: 241, Words: 14, Lines: 8, Duration: 60ms][0m
+[2Kjs                      [Status: 301, Size: 232, Words: 14, Lines: 8, Duration: 64ms][0m
+[2KImage                   [Status: 301, Size: 0, Words: 1, Lines: 1, Duration: 936ms][0m

@@ -1,0 +1,29 @@
+# Nmap 7.92 scan initiated Sun Dec 11 15:41:52 2022 as: nmap -sT -A -oA scanres 10.10.237.164
+Nmap scan report for 10.10.237.164
+Host is up (0.062s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE  VERSION
+22/tcp  closed ssh
+80/tcp  open   http     Apache httpd
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache
+443/tcp open   ssl/http Apache httpd
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: commonName=www.example.com
+| Not valid before: 2015-09-16T10:45:03
+|_Not valid after:  2025-09-13T10:45:03
+|_http-server-header: Apache
+Device type: general purpose|specialized|storage-misc|broadband router|printer|WAP
+Running (JUST GUESSING): Linux 5.X|3.X|4.X|2.6.X (95%), Crestron 2-Series (89%), HP embedded (89%), Asus embedded (88%)
+OS CPE: cpe:/o:linux:linux_kernel:5.4 cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4 cpe:/o:crestron:2_series cpe:/h:hp:p2000_g3 cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4 cpe:/o:linux:linux_kernel:2.6.22
+Aggressive OS guesses: Linux 5.4 (95%), Linux 3.10 - 3.13 (90%), Linux 3.10 - 4.11 (90%), Linux 3.12 (90%), Linux 3.13 (90%), Linux 3.13 or 4.2 (90%), Linux 3.2 - 3.5 (90%), Linux 3.2 - 3.8 (90%), Linux 4.2 (90%), Linux 4.4 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+TRACEROUTE (using proto 1/icmp)
+HOP RTT      ADDRESS
+1   61.04 ms 10.8.0.1
+2   61.28 ms 10.10.237.164
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Dec 11 15:42:38 2022 -- 1 IP address (1 host up) scanned in 46.68 seconds

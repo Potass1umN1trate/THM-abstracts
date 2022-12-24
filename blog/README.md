@@ -15,9 +15,10 @@
 # 4. What CMS was Billy using?
 # 5. What version of the above CMS was being used?
 
-# adding ip to /etc/hosts
+> adding ip to /etc/hosts
 
-# scanning via nmap
+## scanning via nmap
+```
 nmap blog.thm -sC -sV -oA nmap/out
 
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-12-23 03:41 EST
@@ -66,8 +67,10 @@ Host script results:
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 41.04 seconds
+```
 
-# dirbusting web-site
+## dirbusting web-site
+```
 ===============================================================
 Gobuster v3.1.0
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
@@ -97,4 +100,4 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 /n                    (Status: 301) [Size: 0] [--> http://blog.thm/2020/05/26/note-from-mom/]
 /rss2                 (Status: 301) [Size: 0] [--> http://blog.thm/feed/]                    
 Progress: 5448 / 1764488 (0.31%)                    
-
+```

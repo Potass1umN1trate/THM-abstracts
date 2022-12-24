@@ -1,5 +1,4 @@
-# Blog
-# Billy Joel made a Wordpress blog! 
+# Blog<br/>Billy Joel made a Wordpress blog! 
 
 ## Billy Joel made a blog on his home computer and has started working on it.  It's going to be so awesome!
 ## Enumerate this box and find the 2 flags that are hiding on it!  Billy has some weird things going on his laptop.  Can you maneuver around and get what you need?  Or will you fall down the rabbit hole...

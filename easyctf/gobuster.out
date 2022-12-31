@@ -1,0 +1,5 @@
+/.php                [33m (Status: 403)[0m [Size: 290]
+/.html               [33m (Status: 403)[0m [Size: 291]
+/index.html          [32m (Status: 200)[0m [Size: 11321]
+/robots.txt          [32m (Status: 200)[0m [Size: 929]
+/simple              [36m (Status: 301)[0m [Size: 311][34m [--> http://easyctf.thm/simple/][0m
